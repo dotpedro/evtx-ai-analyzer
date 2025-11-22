@@ -272,8 +272,6 @@ C:\Users\joaob\Desktop\ai_log_analyzer\samples\
 
 ### ▶ 4794 — Password Change (DSRM)
 
-This one should produce a **HIGH severity** password-change alert.
-
 ```bash
 python ai_log_summarizer.py --log-file "C:\Users\joaob\Desktop\ai_log_analyzer\samples\4794_DSRM_password_change_t1098.evtx" --output dsrm_report.html
 ```
