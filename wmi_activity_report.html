@@ -1,0 +1,103 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AI Security Analysis Report</title>
+        <style>
+            :root {
+                --bg-color: #121212;
+                --card-bg: #1e1e1e;
+                --text-main: #e0e0e0;
+                --text-dim: #a0a0a0;
+                --accent: #ffea00;
+                --border: #333;
+            }
+            body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; padding: 20px; }
+            .container { max-width: 1100px; margin: 0 auto; }
+            
+            /* Header & Score */
+            .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 2px solid var(--accent); padding-bottom: 20px; }
+            .title h1 { margin: 0; font-size: 24px; text-transform: uppercase; letter-spacing: 2px; }
+            .title span { color: var(--accent); font-weight: bold; }
+            
+            .score-box { text-align: center; background: var(--card-bg); padding: 15px 30px; border-radius: 8px; border: 1px solid var(--accent); }
+            .score-val { font-size: 36px; font-weight: bold; color: var(--accent); display: block; }
+            .score-label { font-size: 12px; color: var(--text-dim); text-transform: uppercase; }
+
+            /* Cards */
+            .card { background-color: var(--card-bg); border-radius: 8px; padding: 20px; margin-bottom: 20px; border: 1px solid var(--border); box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+            .card h2 { margin-top: 0; color: var(--accent); font-size: 18px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+            
+            /* Timeline & Summary */
+            .narrative { line-height: 1.6; color: #ccc; white-space: pre-wrap; }
+            
+            /* Table */
+            table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+            th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+            th { background-color: #252525; color: var(--text-dim); text-transform: uppercase; font-size: 12px; }
+            tr:hover { background-color: #2a2a2a; }
+            
+            /* Badges */
+            .badge { padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; }
+            .badge.high { background-color: rgba(255, 23, 68, 0.2); color: #ff1744; }
+            .badge.medium { background-color: rgba(255, 234, 0, 0.2); color: #ffea00; }
+            .badge.low { background-color: rgba(0, 230, 118, 0.2); color: #00e676; }
+
+            /* Classification Tag */
+            .tag { display: inline-block; background: var(--accent); color: #000; padding: 5px 10px; border-radius: 4px; font-weight: bold; margin-top: 5px; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="title">
+                    <h1>AI Security <span>Report</span></h1>
+                    <div style="margin-top:5px; color: #777;">Generated: 2025-11-22 21:48</div>
+                </div>
+                <div class="score-box">
+                    <span class="score-val">40 / 100</span>
+                    <span class="score-label">Risk Score (MEDIUM)</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🛡️ Executive Summary</h2>
+                <div class="narrative">
+                    <strong>Detected Pattern:</strong> <span class="tag">Suspicious Activity</span><br><br>
+                    A series of successful logins were observed on March 18, 2019, involving multiple accounts, including the Administrator account, from the IP address 10.0.2.17. The rapid succession of logins, particularly with the Administrator account, is atypical and suggests potential suspicious activity. While no programmatic alerts were generated, the pattern of logins warrants further investigation to rule out unauthorized access.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>⏳ Attack Timeline Narrative</h2>
+                <div class="narrative">On 2019-03-18 at 22:15:36, a successful login was recorded from the IP address fe80::79bf:8ee2:433c:2567 using the machine account WIN-77LTAPHIQ1R$. Shortly after, at 22:15:49, multiple successful logins were recorded from the IP address 10.0.2.17 using the Administrator account. These logins occurred in rapid succession, which is unusual for typical user behavior. Additionally, a login was recorded for user01 from the same IP address. Finally, at 22:16:19, another successful login was recorded from the loopback IP address ::1 using the machine account WIN-77LTAPHIQ1R$.</div>
+            </div>
+
+            <div class="card">
+                <h2>🔧 Recommended Remediation</h2>
+                <ul><li>Review the login activity for the Administrator account and verify if the logins were authorized.</li><li>Conduct a security audit on the system to check for any unauthorized changes or anomalies.</li><li>Implement stricter monitoring and alerting for unusual login patterns, especially for privileged accounts.</li><li>Ensure that all systems are up to date with the latest security patches.</li><li>Consider implementing multi-factor authentication for all administrative accounts.</li></ul>
+            </div>
+
+            <div class="card">
+                <h2>🚨 Alert Evidence (0)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Sev</th>
+                            <th>Type</th>
+                            <th>Source IP</th>
+                            <th>User</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+    </html>
+    
