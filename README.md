@@ -353,3 +353,15 @@ They’re safe to share and show what the tool produces end-to-end.
 
 ---
 
+## 9. Shout-out / Credits
+
+This project includes EVTX samples sourced from the excellent public repository  
+**EVTX-ATTACK-SAMPLES** by **@sbousseaden**:
+
+👉 https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES
+
+A huge thank-you to the creator — an invaluable resource for anyone studying Windows forensics,
+blue-team detection engineering, or adversary emulation.
+
+---
+
